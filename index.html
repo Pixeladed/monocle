@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Monocle</title>
+		<script src="lib/jquery.js"></script>
+		<script src="lib/angular.min.js"></script>
+		<script src="lib/please.js"></script>
+        <script src="lib/ntc.js"></script>
+		<script src="script.js"></script>
+		<link rel="stylesheet" href="lib/normalize.css"/>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body ng-app="main">
+        <div id="inputView" class="activeview view">
+            <div id="options" ng-controller="optionController as option">
+                    <ul>
+                        <li ng-class="{active:option.mode == 1}" ng-click="option.mode = 1">MONO</li>
+                        <li ng-class="{active:option.mode == 2}" ng-click="option.mode = 2">COMPLEMENTARY</li>
+                        <li ng-class="{active:option.mode == 3}" ng-click="option.mode = 3">SPLIT-COMPLEMENT</li>
+                        <br/>
+                        <li ng-class="{active:option.mode == 4}" ng-click="option.mode = 4">DOUBLE-COMPLEMENT</li>
+                        <li ng-class="{active:option.mode == 5}" ng-click="option.mode = 5">ANA</li>
+                        <li ng-class="{active:option.mode == 6}" ng-click="option.mode = 6">TRIAD</li>
+                    </ul>    
+            </div>
+            <form ng-controller="inputController as control" id="input-wrap">
+                <input type="text" autofocus autocomplete="off" spellcheck="false" value="?" placeholder="?">
+                <input type="submit" value="debug:submit" class="hidden">
+            </form>
+        </div>
+        <div id="schemeView" class="view">
+            <ul class="colors-display">
+                <li class="scheme-color">
+                    <div class="card">
+                        <span class="color-name">Royal Blue</span>
+                        <ul class="color-values">
+                            <li class="value-hex"><strong>HEX: </strong>#288dff</li>
+                            <li class="value-rgb"><strong>RGB: </strong>rgb(243,43,12)</li>
+                            <li class="hsv"><strong>HSV: </strong>hsv(.23,.77,1)</li>
+                        </ul>
+                    </div>
+                </li> 
+            </ul>
+        </div>
+        <div id="shadeView" class="view"></div>
+	</body>
+</html>
