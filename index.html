@@ -5,12 +5,8 @@
 		<script src="lib/jquery.js"></script>
 		<script src="lib/angular.min.js"></script>
 		<script src="lib/please.js"></script>
-        	<script src="lib/ntc.js"></script>
+        <script src="lib/ntc.js"></script>
 		<script src="script.js"></script>
-		<script type="text/javascript">
-      window.heap=window.heap||[],heap.load=function(t,e){window.heap.appid=t,window.heap.config=e;var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.heapanalytics.com/js/heap.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(t){return function(){heap.push([t].concat(Array.prototype.slice.call(arguments,0)))}},p=["clearEventProperties","identify","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
-      heap.load("492586250");
-    		</script>
 		<link rel="stylesheet" href="lib/normalize.css"/>
 		<link rel="stylesheet" href="style.css">
 	</head>
@@ -28,11 +24,13 @@
                     </ul>    
             </div>
             <form ng-controller="inputController as control" id="input-wrap">
-                <input type="text" autofocus autocomplete="off" spellcheck="false" value="?" placeholder="?">
+                <input type="text" autofocus autocomplete="off" spellcheck="false" value="" placeholder="pick a colour">
                 <input type="submit" value="debug:submit" class="hidden">
             </form>
         </div>
         <div id="schemeView" class="view">
+            <div id="modeTitle"></div>
+            <div id="back">&#10094; back</div>
             <ul class="colors-display">
                 <li class="scheme-color">
                     <div class="card">
@@ -46,6 +44,5 @@
                 </li> 
             </ul>
         </div>
-        <div id="shadeView" class="view"></div>
 	</body>
 </html>

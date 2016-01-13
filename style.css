@@ -34,7 +34,7 @@ div.card,span.card-value {
     background: #333;
     outline: none;
     border: none;
-    font-family: Calibri,sans-serif;
+    font-family: Helvetica Neue,Helvetica,Calibri,sans-serif;
     font-size: 900%;
     color: #f7f7f7;
     text-align: center;
@@ -75,6 +75,26 @@ div.card,span.card-value {
     opacity: 0;
     white-space: nowrap;
 }
+#schemeView div#back {
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+    font-size: 30px;
+    height: 4%;
+    margin-left: 50px;
+    margin-top: 25px;
+    color: #5c5c5c;
+    cursor: pointer;
+}
+#schemeView div#modeTitle {
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+    font-size: 30px;
+    color: #5c5c5c;
+    text-align: center;
+    width: 50vw;
+    margin-left: 25vw;
+    height: 4%;
+    position: absolute;
+    margin-top: 2%;
+}
 #schemeView ul.colors-display {
     width: 100%;
     height: 100%;
@@ -106,7 +126,7 @@ span.color-name {
     margin-left: 10%;
     height: 35px;
     padding-top: 25px;
-    color: #e3e3e3;
+    color: #f3f3f3;
     font-size: 25px;
     font-family: Calibri,sans-serif;
     text-align: left;

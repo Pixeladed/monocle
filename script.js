@@ -13,7 +13,7 @@
   });
 
   optionControl = app.controller('optionController', function() {
-    return this.mode = 0;
+    return this.mode = 4;
   });
 
   colorToHex = function(rgb) {
@@ -127,6 +127,7 @@
       selectedMode = getMode();
       generated = new palette(baseColor, selectedMode);
       debug('.hidden.click', 'generated scheme: ' + generated.scheme);
+      $("#modeTitle").get(0).innerHTML = selectedMode;
       hideview('input');
       showview('scheme');
       return generated.scheme;
@@ -138,6 +139,10 @@
     });
     $('.hidden').click(function() {
       UI.showScheme(colorSubmitted());
+    });
+    $("#back").click(function() {
+      hideview("scheme");
+      showview("input");
     });
   });
 
